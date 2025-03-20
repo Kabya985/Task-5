@@ -1,0 +1,46 @@
+import java.util.Scanner;
+
+public class Kabya {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        // Input month number
+        System.out.print("Enter the month number (1-12): ");
+        int month = scanner.nextInt();
+        
+        // Using switch statement to determine the season
+        String season = "";
+        
+        switch (month) {
+            case 1:
+            case 2:
+                season = "গ্রীষ্ম (Summer)";
+                break;
+            case 3:
+            case 4:
+                season = "বর্ষা (Rainy)";
+                break;
+            case 5:
+            case 6:
+                season = "শরৎ (Autumn)";
+                break;
+            case 7:
+            case 8:
+                season = "হেমন্ত (Pre-Winter)";
+                break;
+            case 9:
+            case 10:
+                season = "শীত (Winter)";
+                break;
+            case 11:
+            case 12:
+                season = "বসন্ত (Spring)";
+                break;
+            default:
+                season = "Invalid month! Please enter a number between 1 and 12.";
+                break;
+        }
+        
+        System.out.println("The season is: " + season);
+    }
+}
